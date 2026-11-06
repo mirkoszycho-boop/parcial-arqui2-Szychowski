@@ -1,0 +1,8 @@
+# Baseline LVM - generado 2026-11-05T22:36:00+00:00
+# lv_name vg_name lv_size_m
+  lv_docker    vg_datos   12.00
+  lv_workareas vg_datos 2560.00
+  lv_swap      vg_temp  2560.00
+# vg_name vg_free_m
+  vg_datos 496.00
+  vg_temp  508.00

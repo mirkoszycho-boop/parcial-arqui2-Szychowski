@@ -1,0 +1,7 @@
+---
+# tasks file for 2p_szychowski
+
+- name: Creo el grupo
+  group:
+    name: G2p_2026_Defensa
+    state: present

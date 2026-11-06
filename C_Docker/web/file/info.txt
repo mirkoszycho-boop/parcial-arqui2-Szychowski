@@ -1,0 +1,5 @@
+=== INFO MEMORIA RAM LIBRE ===
+Mem:           957Mi       214Mi        84Mi       0.0Ki       658Mi       578Mi
+
+=== PARA FILTRO ===
+free -h | grep "Mem:"

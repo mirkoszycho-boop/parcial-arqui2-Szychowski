@@ -1,0 +1,20 @@
+---
+- hosts: 
+  - all
+
+  # Variables Globales
+  vars_files:
+    - vars/main.yml
+
+
+  roles:
+    - 2p_szychowski
+
+
+  tasks:
+    
+    
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+

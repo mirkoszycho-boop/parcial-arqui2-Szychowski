@@ -1,0 +1,49 @@
+2026-11-05 23:40:44,280 p=11478 u=vagrant n=ansible | - Role 2parcial_szychowski was created successfully
+2026-11-05 23:42:23,043 p=11490 u=vagrant n=ansible | - Role 2p_szychowski was created successfully
+2026-11-05 23:45:00,602 p=11502 u=vagrant n=ansible | ERROR! - the directory ./2p_szychowski already exists. You can use --force to re-initialize this directory,
+however it will reset any main.yml files that may have
+been modified there already.
+2026-11-06 00:12:10,902 p=11594 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost
+was 127.0.0.1
+
+2026-11-06 00:12:11,711 p=11594 u=vagrant n=ansible | PLAY [all] ******************************************************************************
+2026-11-06 00:12:11,732 p=11594 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************
+2026-11-06 00:12:15,128 p=11594 u=vagrant n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-11-06 00:12:15,128 p=11594 u=vagrant n=ansible | ok: [localhost]
+2026-11-06 00:12:16,128 p=11594 u=vagrant n=ansible | [WARNING]: Platform linux on host 127.0.0.1 is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-11-06 00:12:16,128 p=11594 u=vagrant n=ansible | ok: [127.0.0.1]
+2026-11-06 00:12:16,136 p=11594 u=vagrant n=ansible | TASK [2p_szychowski : Creo el grupo] ****************************************************
+2026-11-06 00:12:16,746 p=11594 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G2p_2026_Defensa"}
+2026-11-06 00:12:16,799 p=11594 u=vagrant n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G2p_2026_Defensa"}
+2026-11-06 00:12:16,800 p=11594 u=vagrant n=ansible | PLAY RECAP ******************************************************************************
+2026-11-06 00:12:16,800 p=11594 u=vagrant n=ansible | 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-06 00:12:16,801 p=11594 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-06 00:14:06,992 p=11971 u=root n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost
+was 127.0.0.1
+
+2026-11-06 00:14:07,109 p=11971 u=root n=ansible | PLAY [all] ******************************************************************************
+2026-11-06 00:14:07,117 p=11971 u=root n=ansible | TASK [Gathering Facts] ******************************************************************
+2026-11-06 00:14:07,287 p=11971 u=root n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nroot@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-11-06 00:14:08,592 p=11971 u=root n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter
+at /usr/bin/python3.10, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-11-06 00:14:08,593 p=11971 u=root n=ansible | ok: [localhost]
+2026-11-06 00:14:08,602 p=11971 u=root n=ansible | TASK [2p_szychowski : Creo el grupo] ****************************************************
+2026-11-06 00:14:09,024 p=11971 u=root n=ansible | changed: [localhost]
+2026-11-06 00:14:09,052 p=11971 u=root n=ansible | TASK [Otra tarea] ***********************************************************************
+2026-11-06 00:14:09,067 p=11971 u=root n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-11-06 00:14:09,069 p=11971 u=root n=ansible | PLAY RECAP ******************************************************************************
+2026-11-06 00:14:09,069 p=11971 u=root n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-06 00:14:09,069 p=11971 u=root n=ansible | localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,43 @@
+ Enunciado 2do Parcial - 2° Cuatrimestre 2026 
+
+ Para volver a ver este enunciado ejecutá: ver-enunciado
+
+
+A - LVM
+
+    Scriptear:
+        - Utilizar el disco de 1G sobrante.
+        - Extender el lv_workareas en su totalidad
+        
+
+
+B - Bash scripting
+
+    - Dejar el script en: /usr/local/bin/2p_alta_usuarios.sh
+    - Adaptar el bash script de Alta de usuarios para que funcione con el siguiente Listado.
+      cat $HOME/2p_2026/B_BashScript/Lista.txt
+
+
+C - Docker:
+    - Agregar sus datos personales en el archivo index.html
+    
+    - Scriptear (Tareas_Docker.sh):
+        - Generar una imagen con el nombre: 2p_2026_<tu-Apellido>
+        - Subir la imagen generada en dockerhub
+
+    - Generar un bash-script en: /usr/local/bin/2p_run_docker.sh para que:
+        - Ejecute la imagen sobre el puerto 8082 del host
+        - Montar la carpeta web/file en /usr/share/nginx/html/file
+        - Reemplazar el contenido del archivo info.txt con:
+            - informacion de Memoria RAM libre
+            - Comando utilizado para hacer dicho filtro
+
+
+C - Ansible:
+    - Agregar un rol con nombre: 2p_<tu-apellido>
+    - Desde dicho role, crear el grupo G2p_2026_Defensa    
+
+    - scriptear:
+       Dejar dentro de la carpeta de ansible, un archivo run_playbook.sh 
+       Con la linea de comando para la ejecucion del playbook
+

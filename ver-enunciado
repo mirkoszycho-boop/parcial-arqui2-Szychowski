@@ -1,0 +1,33 @@
+#!/bin/bash
+# Muestra el código y el enunciado generados para el examen.
+#
+# Este script se copia dentro de la carpeta de resolución y se enlaza
+# desde /usr/local/bin/ver-enunciado, por lo que puede ejecutarse desde
+# cualquier directorio.
+
+set -u
+
+SCRIPT_PATH="$(readlink -f -- "${BASH_SOURCE[0]}")"
+DIR="$(cd -- "$(dirname -- "$SCRIPT_PATH")" && pwd)"
+ENUNCIADO="$DIR/Ejercicios.txt"
+CODIGO="$DIR/.Codigo.txt"
+
+if [[ ! -r "$ENUNCIADO" ]]; then
+    echo "No se encontró el enunciado en: $ENUNCIADO" >&2
+    echo "Generá el examen nuevamente con ./Genera_Ejercicios.sh" >&2
+    exit 1
+fi
+
+mostrar_enunciado() {
+    if [[ -r "$CODIGO" ]]; then
+        cat -- "$CODIGO"
+        echo
+    fi
+    cat -- "$ENUNCIADO"
+}
+
+if [[ -t 1 ]] && command -v less >/dev/null 2>&1; then
+    mostrar_enunciado | less -R
+else
+    mostrar_enunciado
+fi
